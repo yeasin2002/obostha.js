@@ -1,4 +1,4 @@
-import { create } from '../../../src'
+import { create } from 'obostha' // link locally or install form npm!
 
 type CounterState = { count: number }
 

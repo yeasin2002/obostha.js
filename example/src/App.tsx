@@ -1,5 +1,13 @@
+import { useCounterStore } from './store/counter'
+
 const App = () => {
-  return <div>App</div>
+  const count = useCounterStore((state) => state.count)
+  const increment = useCounterStore((state) => state.increment)
+  return (
+    <div>
+      <h1>Counter: {count}</h1>
+    </div>
+  )
 }
 
 export default App

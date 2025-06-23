@@ -1,6 +1,6 @@
 {
-  "name": "npm-starter",
-  "version": "1.0.1",
+  "name": "obostha",
+  "version": "0.0.1",
   "description": "Starter Template for creating NPM Packages",
   "main": "dist/index.js",
   "license": "MIT",
