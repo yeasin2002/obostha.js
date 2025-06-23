@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "vitest",
     "build": "tsup",
-    "format:write": "prettier --write .",
-    "format:check": "prettier --check .",
+    "format:fix": "prettier --write ./src",
+    "format:check": "prettier --check ./src",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "lint": "tsc",
     "test": "vitest run",
