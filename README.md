@@ -22,10 +22,10 @@ npm install obostha
 
 ### Core Store
 
-Create a store using [`createStore`](src/core/store.ts):
+Create a store using createStore:
 
 ```typescript
-import { createStore } from 'obostha/core/store'
+import { createStore } from 'obostha'
 
 type CounterState = { count: number }
 const counterStore = createStore<CounterState>((set) => ({
@@ -45,7 +45,7 @@ const counterStore = createStore<CounterState>((set) => ({
 Use [`create`](src/react/use-store.ts) to create a React hook for your store:
 
 ```typescript
-import { create } from 'obostha/react/use-store'
+import { create } from 'obostha'
 
 type CounterState = { count: number }
 const useCounter = create<CounterState>((set) => ({
@@ -69,7 +69,7 @@ function Counter() {
 
 ## API Reference
 
-### [`createStore`](src/core/store.ts)
+### createStore
 
 ```typescript
 function createStore<S extends object>(
@@ -84,7 +84,7 @@ function createStore<S extends object>(
 - `StateCreator<S>`: `(set: SetState<S>) => S`
 - `SetState<S>`: `(partial: Partial<S> | (prev: S) => Partial<S>) => void`
 
-### [`create`](src/react/use-store.ts)
+### create
 
 ```typescript
 function create<S extends object>(fn: StateCreator<S>): <Sel = S>(selector?: (s: S) => Sel) => Sel
@@ -95,8 +95,3 @@ function create<S extends object>(fn: StateCreator<S>): <Sel = S>(selector?: (s:
 ## License
 
 MIT
-
-<!--
-
-This starter followed https://www.totaltypescript.com/how-to-create-an-npm-package?fbclid=IwZXh0bgNhZW0CMTEAAR30Xe7tQXTY-63VIZDDhBjL5l_CBBdsgSisemfDFgse8DoKpPSOJ7qNP1E_aem_EfaptgEl5hSIGSAdLKwoig
- -->
