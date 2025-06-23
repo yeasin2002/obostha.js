@@ -1,10 +1,8 @@
-import { create } from 'obostha' // link locally or install form npm!
+import { create } from 'obostha'
 
-type CounterState = { count: number }
+type CounterState = { count: number; increment: () => void }
 
-export const useCounterStore = create<CounterState>((set) => ({
+export const useCounter = create<CounterState>((set) => ({
   count: 0,
-  increment: () => set((state) => ({ count: state.count + 1 })),
-  decrement: () => set((state) => ({ count: state.count - 1 })),
-  reset: () => set({ count: 0 }),
+  increment: () => set((s) => ({ count: s.count + 1 })),
 }))

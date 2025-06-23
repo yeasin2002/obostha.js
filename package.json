@@ -19,17 +19,16 @@
     "lint-staged": "lint-staged"
   },
   "keywords": [
-    "demo",
     "typescript"
   ],
-  "homepage": "https://github.com/yeasin2002/npm-starter",
+  "homepage": "https://github.com/yeasin2002/obostha.js",
   "bugs": {
-    "url": "https://github.com/yeasin2002/npm-starter/issues"
+    "url": "https://github.com/yeasin2002/obostha.js/issues"
   },
   "author": "Md Kawsar Islam Yeasin <mdkawsarislam2002@gmail.com> (https://yeasin2002.vercel.app/)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yeasin2002/npm-starter.git"
+    "url": "git+https://github.com/yeasin2002/obostha.js.git"
   },
   "files": [
     "dist"
