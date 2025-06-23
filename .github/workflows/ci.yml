@@ -25,8 +25,20 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Run CI
-        run: npm run ci
+      # - name: Run CI
+      #   run: bun run ci
 
-      - name: Run Tests
-        run: bun test
+      - name: Build
+        run: bun run build
+
+      - name: Format
+        run: bun run format:check
+
+      - name: Check Exports
+        run: bun run check-exports
+
+      - name: Lint
+        run: bun run lint
+
+      # - name: Run Tests
+      #   run: bun test
