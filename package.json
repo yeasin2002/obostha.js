@@ -1,0 +1,61 @@
+{
+  "name": "npm-starter",
+  "version": "1.0.1",
+  "description": "Starter Template for creating NPM Packages",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitest",
+    "build": "tsup",
+    "format:write": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "lint": "tsc",
+    "test": "vitest run",
+    "local-release": "changeset version && changeset publish",
+    "prepublishOnly": "npm run ci",
+    "ci": "npm run build && npm run format:check && npm run check-exports && npm run lint && npm run test",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "keywords": [
+    "demo",
+    "typescript"
+  ],
+  "homepage": "https://github.com/yeasin2002/npm-starter",
+  "bugs": {
+    "url": "https://github.com/yeasin2002/npm-starter/issues"
+  },
+  "author": "Md Kawsar Islam Yeasin <mdkawsarislam2002@gmail.com> (https://yeasin2002.vercel.app/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeasin2002/npm-starter.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "dependencies": {
+    "@arethetypeswrong/cli": "^0.18.2",
+    "@changesets/cli": "^2.27.9",
+    "husky": "^9.1.6",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.3.3",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3",
+    "vitest": "^3.1.1"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
